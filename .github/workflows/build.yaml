@@ -52,6 +52,9 @@ jobs:
                     - name: aarch64
                       container: agners/aarch64-chip-build:0.6.18
                       runner: ARM64
+                    - name: x86_64_cross_armhf
+                      container: damienkastner/chip-build-crosscompile-armhf:0.6.25
+                      runner: ubuntu-22.04
 
         runs-on: ${{ matrix.arch.runner }}
         permissions:
